@@ -37,8 +37,8 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
-   if(idioma === "aleman"){return "Guiten Tag!" ;}
-   else if(idioma==="manatarin"){return "Ni Hao!";}
+   if(idioma === "aleman"){return "Guten Tag!" ;}
+   else if(idioma==="mandarin"){return "Ni Hao!";}
    else if(idioma==="ingles"){return "Hello!";}
    else return "Hola!";
 }
@@ -57,9 +57,8 @@ function colors(color) {
   case "red": return "This is red";
   case "green": return "This is green";
   case "orange": return "This is orange";
-  default : return "Color not found";
-
-
+  default: return "Color not found";
+   }
 }
 
 function esDiezOCinco(num) {
@@ -116,7 +115,7 @@ else if(num1==0 && num2==0 && num3==0){return "Error";}
 else return false;
 }
 
-}
+
 
 function esPrimo(num) {
    // Retornar true si "num" es primo.
@@ -125,11 +124,11 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if(num == 1 || num ==0){return false;}
+   if(num == 1 || num<=0){return false;}
    for(var i=2; i<num;i++){
+      if(num == i){return true;}
       if(num%i==0){return false;}
-   }
-   return true;
+   }return true;
 }
 
 function esVerdadero(valor) {
@@ -144,7 +143,7 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if(num.lenght===3){return true;}
+   if(num>99 && num<1000){return true;}
    else return false;
 }
 
@@ -159,6 +158,7 @@ do{
    i++;
 }while(i<8)
 
+return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
